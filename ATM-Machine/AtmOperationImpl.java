@@ -8,7 +8,7 @@ public class AtmOperationImpl implements AtmOperationInterf {
 
 
     @Override
-    public void viewBalance() {
+    public void getBalance() {
         System.out.println("Available Balance: " + atm.getBalance());
     }
 
@@ -19,7 +19,7 @@ public class AtmOperationImpl implements AtmOperationInterf {
             ministmt.put(withdrawAmount, " Amount Withdrawn");
             System.out.println("Please collect your cash: " + withdrawAmount);
             atm.setBalance(atm.getBalance() - withdrawAmount);
-            viewBalance();
+            getBalance();
         } else {
             System.out.println("Insufficient Balance");
         }
@@ -34,7 +34,7 @@ public class AtmOperationImpl implements AtmOperationInterf {
         ministmt.put(depositAmount, " Amount Deposited");
         System.out.println("Successfully Deposited: " + depositAmount);
         atm.setBalance(atm.getBalance() + depositAmount);
-        viewBalance();
+        getBalance();
     }
 
     @Override

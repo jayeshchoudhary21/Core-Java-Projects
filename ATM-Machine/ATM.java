@@ -11,8 +11,7 @@ public class ATM {
     }
 
     public double getBalance() {
-    throw new UnsupportedOperationException("Unimplemented method 'getBalance'");
-
+        return balance;
     }
 
     public void setBalance(double balance) {

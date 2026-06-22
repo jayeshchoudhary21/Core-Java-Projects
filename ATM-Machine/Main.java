@@ -27,7 +27,7 @@ public class Main {
                 System.out.print("Enter Choice: ");
                 int ch = in.nextInt();
                 if (ch == 1) {
-                    op.viewBalance();
+                    op.getBalance();
                 } else if (ch == 2) {
                     System.out.println("Enter Amount to Withdraw: ");
                     double withdrawAmount = in.nextDouble();
@@ -49,6 +49,6 @@ public class Main {
         } else {
             System.out.println("Incorrect ATM Number or Pin");
         }
-
+        in.close();
     }
 }
